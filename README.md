@@ -13,20 +13,20 @@ Utilize o ambiente `Node.js` para executar no console o código `TypeScript` des
 ```mermaid
 classDiagram
     class Moeda {
-        - double valor
-        - String nome
+        - double: valor
+        - String: nome
         + Moeda(double v, String n)
-        + getValor(): double
-        + getNome(): String
+        + getValor() double
+        + getNome() String
     }
     
     class Cofrinho {
         + Cofrinho()
-        + adicionar(Moeda m): void
-        + calcularTotal(): double
+        + adicionar(Moeda m) void
+        + calcularTotal() double
     }
     
-    Moeda "1" --> "1..*" Cofrinho
+    Moeda "*" <--> Cofrinho
 ```
 - a) Implemente as classes correspondentes em TypeScript. Você pode implementar os métodos get apresentados na classe Moeda como: campos somente de leitura, métodos de acesso ou propriedades de leitura. Utilize uma coleção adequada para implementar a coleção de moedas na classe Cofrinho.
 - b) Escreva um bloco de código para testar a implementação.
@@ -47,24 +47,24 @@ classDiagram
     class Cliente {
         <<abstract>>
         - nome: String
-        + getNome(): String
-        + <<abstract>> getMensalidade(): double
+        + getNome() String
+        + <<abstract>> getMensalidade() double
         + Cliente(umNome: String)
     }
     
     class ClienteFisico {
         - idade: int
         - salario: double
-        + getIdade(): int
-        + setIdade(umaIdade: int): void
-        + getSalario(): double
-        + setSalario(umSalario: double): void
+        + getIdade() int
+        + setIdade(umaIdade: int) void
+        + getSalario() double
+        + setSalario(umSalario: double) void
         + ClienteFisico(umNome: String, umaIdade: int, umSalario: double)
     }
     
     class ClienteJuridico {
         - mensalidade: double
-        + setMensalidade(umaMensalidade: double): void
+        + setMensalidade(umaMensalidade: double) void
         + ClienteJuridico(umNome: String, umaMensalidade: double)
     }
     
