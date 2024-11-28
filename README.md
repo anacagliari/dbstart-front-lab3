@@ -26,7 +26,7 @@ classDiagram
         + calcularTotal() double
     }
     
-    Moeda "*" <--> Cofrinho
+    Moeda "*" <-- Cofrinho
 ```
 - a) Implemente as classes correspondentes em TypeScript. Você pode implementar os métodos get apresentados na classe Moeda como: campos somente de leitura, métodos de acesso ou propriedades de leitura. Utilize uma coleção adequada para implementar a coleção de moedas na classe Cofrinho.
 - b) Escreva um bloco de código para testar a implementação.
